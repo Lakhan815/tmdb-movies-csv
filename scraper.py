@@ -34,7 +34,11 @@ def is_valid(movie):
     if not title.strip() or not movie.get('release_date'):
         return False
     
+    if not overview or not overview.strip():
+        return False
+
     return True
+    
     
 def cleaned_data(movie):
     cleaned = {
